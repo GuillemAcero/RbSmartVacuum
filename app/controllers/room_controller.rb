@@ -11,17 +11,19 @@ class RoomController < ActionController::API
             ).call
         end
 
-        render status: :ok
+        render json: {status: 200, message: "Ok"}
     end
 
 
     def get_dead_ends
         room = Room.find_by(name: params[:room])
         
-        render status: :not_found unless room
-
-        result = CountDeadEnds.new(room).calculate
-        render json: result
+        if room != nil 
+            result = CountDeadEnds.new(room).calculate
+            render json: result
+        else
+            render json: {status: 404, message: "Room Not Found"}
+        end
     end
 
 
