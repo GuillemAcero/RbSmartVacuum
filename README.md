@@ -2,15 +2,15 @@
 # Project
 This app is the solution to the challeng Badi proposed.
 
-[project.com](github_url)
+[GitHub](https://github.com/GuillemAcero/RbSmartVacuum)
 
 # Install
 
 ## Clone the repository
 
 ```shell
-git clone git@github.com:juliendargelos/project.git
-cd project
+git clone https://github.com/GuillemAcero/RbSmartVacuum.git
+cd rb_smart_vacuum
 ```
 
 ## Check Ruby version
@@ -23,13 +23,18 @@ The ouput should be `ruby-3.0.0`
 
 
 ## Initialize the database
+Run the following command to initialize the database
 
 ```shell
 rails db:create db:migrate
 ```
 
-# TODO BUNDLE INSTURCITON
+And run the following to install the gems
+```shell
+bundle
+```
 ## Server
+Initialize the server using the following:
 
 ```shell
 rails s
